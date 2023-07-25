@@ -6,7 +6,7 @@ local keymap = vim.keymap
 
 keymap.set("i", "jk", "<ESC>")
 
-keymap.set("n", "<leader>nh", ":nohl<CR>")
+keymap.set("n", "<leader>nh", ":nohl<CR>") -- quit normal mode
 
 keymap.set("n", "x", '"_x')
 
