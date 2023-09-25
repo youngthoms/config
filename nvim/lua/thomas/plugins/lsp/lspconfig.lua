@@ -40,7 +40,7 @@ lspconfig["html"].setup({
 })
 
 -- configure python server
-lspconfig["pyright"].setup({
+lspconfig["jedi_language_server"].setup({
   capabilities = capabilities,
   on_attach = on_attach
 })

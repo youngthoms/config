@@ -1,8 +1,11 @@
 local opt = vim.opt -- for conciseness
+local api = vim.api
 
 -- line numbers
 opt.relativenumber = false
 opt.number = true
+opt.list = true
+api.nvim_set_option('listchars', 'tab:␣ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨')
 
 -- tabs & identation
 opt.tabstop = 2
@@ -25,8 +28,7 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
-
--- backspace 
+-- backspace
 opt.backspace = "indent,eol,start"
 
 -- clipboard

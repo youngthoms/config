@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
 
   -- lua functions plugins use
   use "bluz71/vim-nightfly-guicolors"
+  use "ellisonleao/gruvbox.nvim"
 
   -- tmux & splir window navigation
   use "christoomey/vim-tmux-navigator"

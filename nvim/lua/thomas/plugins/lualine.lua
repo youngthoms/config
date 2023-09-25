@@ -17,12 +17,12 @@ local new_colors = {
 
 -- change nightlfy theme colors
 lualine_nightfly.normal.a.bg = new_colors.blue
-lualine_nightfly.insert.a.bg = new_colors.green
+lualine_nightfly.insert.a.bg = new_colors.yellow
 lualine_nightfly.visual.a.bg = new_colors.violet
 lualine_nightfly.command = {
   a = {
     gui = "bold",
-    bg = new_colors.yellow,
+    bg = new_colors.blue,
     fg = new_colors.black, -- black
   },
 }
