@@ -1,4 +1,11 @@
 # Aliases
+alias l='exa --long --git'
+alias la='exa --long --icons --git --all'
+alias lt='exa --tree --level=2 --long --icons --git'
+alias cat='batcat'
+alias c='clear'
+
+# Git
 alias g='git'
 alias gst='git status'
 alias gco='git checkout'
@@ -9,19 +16,19 @@ alias gp='git push'
 alias gfp='git fetch && git pull'
 alias gpf='git push --force-with-lease'
 alias gri='git rebase -i'
+
+# Poetry
 alias p='poetry run invoke'
-alias s='sudo'
-alias l='ls'
-alias c='clear'
 alias pr='poetry run'
+
+# Neovim
 alias n='nvim'
-alias cat='batcat'
-alias l='exa --long --git'
-alias la='exa --long --icons --git --all'
-alias lt='exa --tree --level=2 --long --icons --git'
+
+# Glab
+alias gl='glab'
 
 # Direnv
-direnv hook fish | source 
+direnv hook fish | source
 
 # bash ~/scripts/hello.sh
 
@@ -53,15 +60,15 @@ if [ -n "$SSH_AGENT_PID" ]
     ps -ef | grep $SSH_AGENT_PID | grep ssh-agent > /dev/null
     if [ $status -eq 0 ]
         test_identities
-    end  
+    end
 else
     if [ -f $SSH_ENV ]
         . $SSH_ENV > /dev/null
-    end  
+    end
     ps -ef | grep $SSH_AGENT_PID | grep -v grep | grep ssh-agent > /dev/null
     if [ $status -eq 0 ]
         test_identities
-    else 
+    else
         start_agent
-    end  
+    end
 end
